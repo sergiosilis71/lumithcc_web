@@ -2,33 +2,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Lumith.cc</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #4CAF50;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secretos</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .password-box {
+      margin-bottom: 20px;
+    }
+    video {
+      width: 100%;
+      max-width: 720px;
+      border: 2px solid white;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido a Lumith.cc</h1>
-        <p>Tu espacio digital, libre de datos personales.</p>
-    </div>
+  <div class="password-box">
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="checkPassword()">Entrar</button>
+  </div>
+  <div id="video-section" style="display:none;">
+    <h1>Desde aquel 27 de abril, todo cambió. Este rincón guarda lo más bello que nos une.</h1>
+    <video controls>
+      <source src="shotcut-20250526-223151.mp4" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+  </div>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      if (input === '27deabril') {
+        document.querySelector('.password-box').style.display = 'none';
+        document.getElementById('video-section').style.display = 'block';
+      } else {
+        alert('Contraseña incorrecta');
+      }
+    }
+  </script>
 </body>
 </html>
