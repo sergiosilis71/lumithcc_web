@@ -1,56 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secretos</title>
+  <meta charset="UTF-8">
+  <title>Bienvenidos a Lumith.cc</title>
   <style>
     body {
-      background-color: #111;
-      color: white;
+      background: linear-gradient(#0f0f0f, #1c1c1c);
+      color: #fff;
+      font-family: sans-serif;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      font-family: sans-serif;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.3em;
+      max-width: 600px;
       text-align: center;
-      padding: 20px;
-    }
-    .password-box {
-      margin-bottom: 20px;
-    }
-    video {
-      width: 100%;
-      max-width: 720px;
-      border: 2px solid white;
-      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <div class="password-box">
-    <input type="password" id="password" placeholder="Contraseña" />
-    <button onclick="checkPassword()">Entrar</button>
-  </div>
-  <div id="video-section" style="display:none;">
-    <h1>Desde aquel 27 de abril, todo cambió. Este rincón guarda lo más bello que nos une.</h1>
-    <video controls>
-      <source src="shotcut-20250526-223151.mp4" type="video/mp4" />
-      Tu navegador no soporta el video.
-    </video>
-  </div>
-  <script>
-    function checkPassword() {
-      const input = document.getElementById('password').value;
-      if (input === '27deabril') {
-        document.querySelector('.password-box').style.display = 'none';
-        document.getElementById('video-section').style.display = 'block';
-      } else {
-        alert('Contraseña incorrecta');
-      }
-    }
-  </script>
+  <h1>🌌 Lumith.cc</h1>
+  <p>Tu nuevo sitio está online. Pronto, llenaremos este espacio de ideas y proyectos únicos ✨</p>
 </body>
 </html>
